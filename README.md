@@ -2,7 +2,8 @@ Sha224 Tree
 ===========
 
 *	A tree style hashing using sha224.
-*	Currently time reduced by 1 sec for 1GB file.
+*	Currently time reduced by **2** sec for 1GB file.
+
 
 ![Block Based Hashing](image.png)
 
@@ -16,6 +17,6 @@ $	python hash.py **file**
 Things to do
 ============
 
-*	[ ] Use multiprocessing 
+*	[x] Use multiprocessing 
 *	[ ] Increase Efficinecy
 
