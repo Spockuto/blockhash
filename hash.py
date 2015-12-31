@@ -2,7 +2,7 @@
 
 import hashlib
 import sys
-from multiprocessing import Pool , Manager
+from multiprocessing import Pool 
 
 def chunks( file_object , chunk_size=20971520):
     while True:
@@ -16,15 +16,14 @@ def hashing(piece):
 
 if __name__ == '__main__':
 
-	manager = Manager()
-	hashtree = manager.list()
-	
+	hashtree = ''
+
 	big_file = open(sys.argv[1] ,'rb')
 	pool = Pool(4)
 	
 	for chunk_hash in pool.imap(hashing, chunks(big_file)):
-		hashtree.append(chunk_hash)	
+		hashtree = hashtree + chunk_hash
 
-	print str(hashlib.sha224(''.join(hashtree)).hexdigest())
+	print str(hashlib.sha224(hashtree).hexdigest())
 	
 	sys.exit()
