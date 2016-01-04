@@ -11,7 +11,19 @@ Sha224 Tree
 Usage
 =====
 ```sh
-$	python hash.py **file**
+$	python hash.py --help
+	
+	usage: hash.py [-h] [-1] [-2] [-3] [-4] [-5] [-f FILE]
+
+	optional arguments:
+	  -h, --help            show this help message and exit
+	  -1, --sha1
+	  -2, --sha224
+	  -3, --sha256
+	  -4, --sha384
+	  -5, --sha512
+	  -f FILE, --file FILE  The path to the file
+	  
 ```
 
 Things to do
