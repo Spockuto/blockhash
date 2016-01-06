@@ -6,6 +6,7 @@ python:
 install: 
   - python setup.py install
   - pip install future
+  - pip install coveralls
 script: nosetests
 after_success: coveralls
 notifications:

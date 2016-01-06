@@ -1,10 +1,13 @@
 #`blockhash`
 [![Build Status](https://travis-ci.org/Spockuto/blockhash.svg?branch=master)](https://travis-ci.org/Spockuto/blockhash)
-
-
+[![Coverage Status](https://coveralls.io/repos/Spockuto/blockhash/badge.svg?branch=master&service=github)](https://coveralls.io/github/Spockuto/blockhash?branch=master)
 
 **A SHA implementations which serves normal SHA for small files and**
 **block based SHA for larger files which speeds up your process**
+
+
+![Block Based Hashing](images/image.png)
+
 
 #Installation
 

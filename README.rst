@@ -1,5 +1,9 @@
 blockhash 
 =========
+.. image:: https://travis-ci.org/Spockuto/blockhash.svg?branch=master
+    :target: https://travis-ci.org/Spockuto/blockhash
+
+.. image:: https://coveralls.io/repos/Spockuto/blockhash/badge.svg?branch=master&service=github :target: https://coveralls.io/github/Spockuto/blockhash?branch=master
 
 A SHA implementations which serves normal SHA for small files and
 block based SHA for larger files which speeds up your process
