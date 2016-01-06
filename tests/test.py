@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import subprocess
 from nose.tools import eq_, ok_
 
