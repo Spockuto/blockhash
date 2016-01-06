@@ -1,4 +1,7 @@
-#`blockhash` - v 0.1.0
+#`blockhash`
+
+..**A SHA implementations which serves normal SHA for small files and**..
+..**block based SHA for larger files which speeds up your process**..
 
 #Installation
 
@@ -14,8 +17,6 @@
 ##Dependencies
 
 * future `pip install future`
-
-#Options
 
 Usage
 =====

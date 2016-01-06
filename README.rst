@@ -1,5 +1,8 @@
-blockhash - v 0.1.0
-================
+blockhash 
+=========
+
+>**A SHA implementations which serves normal SHA for small files and**
+>**block based SHA for larger files which speeds up your process**
 
 Installation
 ============
@@ -26,8 +29,8 @@ Latest build from the Source
    
       $ python setup.py install
 
-Options
-=======
+Usage
+=====
 
 .. code:: sh
 
