@@ -16,7 +16,7 @@
 
 ##Dependencies
 
-*future `$ pip install future`
+* future `$ pip install future`
 
 Usage
 =====
