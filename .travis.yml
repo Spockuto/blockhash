@@ -4,13 +4,8 @@ python:
   - "2.7"
   - "3.3"
   - "3.4"
-install:
-  - python setup.py install
-  - pip install future
-scripts:
-  - nosetests
-  - nosetests --with-coverage
-after_success:
-  - coveralls
+install: "python setup.py install"
+scripts: nosetests
+after_success: coveralls
 notifications:
   email: false
