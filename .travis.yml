@@ -5,7 +5,7 @@ python:
   - "3.3"
   - "3.4"
 install: "python setup.py install"
-scripts: nosetests
+script: nosetests
 after_success: coveralls
 notifications:
   email: false
