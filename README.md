@@ -1,5 +1,5 @@
 #`blockhash`
-
+[![Build Status](https://travis-ci.org/Spockuto/blockhash.svg?branch=master)](https://travis-ci.org/Spockuto/blockhash)
 **A SHA implementations which serves normal SHA for small files and**
 **block based SHA for larger files which speeds up your process**
 
