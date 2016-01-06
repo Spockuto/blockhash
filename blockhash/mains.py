@@ -45,6 +45,11 @@ def main():
     parser.add_argument('-4', '--sha384', action='store_true')
     parser.add_argument('-5', '--sha512', action='store_true')
     parser.add_argument('-f', '--file', type=str, help="The path to the file")
+    
+    if len(sys.argv) == 1:
+        parser.print_help()
+        return
+
     global args 
     args = parser.parse_args()
 

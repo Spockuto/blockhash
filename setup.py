@@ -1,4 +1,9 @@
-from setuptools import setup
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
+
+
 
 setup(name='blockhash',
     description='Speed up your SHA. A different hash style',
@@ -9,6 +14,7 @@ setup(name='blockhash',
     entry_points={
         'console_scripts': ['blockhash=blockhash:main'],
     },
+    test_suite='tests',
     url="https://github.com/Spockuto/blockhash",
     keywords=[ 'CLI', 'python'],
     classifiers=[

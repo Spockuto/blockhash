@@ -1,5 +1,4 @@
 language: python
-sudo: required
 python:
   - "2.6"
   - "2.7"
@@ -8,5 +7,10 @@ python:
 install:
   - python setup.py install
   - pip install future
+scripts:
+  - nosetests
+  - nosetests --with-coverage
+after_success:
+  - coveralls
 notifications:
   email: false
