@@ -7,7 +7,7 @@ except ImportError:
 
 setup(name='blockhash',
     description='Speed up your SHA. A different hash style',
-    version='0.1.0',
+    version='0.1.1',
 	author="Venkkatesh_Sekar",
 	author_email="venkythesupersaiyan@gmail.com",
     packages=['blockhash'],
