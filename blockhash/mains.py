@@ -20,10 +20,9 @@ def chunks(file_object, chunk_size=20971520):
         data = file_object.read(chunk_size)
         if not data:
             break
-        yield data
+        yield data + ":chunk"
 
 def hashing(piece):
-    piece += ":chunk"
     if args.sha1:
         return str(hashlib.sha1(piece).hexdigest())
     elif args.sha224:
@@ -64,7 +63,7 @@ def main():
 
     pool.terminate()
 
-    print(str(hashing(hashtree)))
+    print(str(hashing(hashtree.encode('ascii'))))
 
 
 if __name__ == '__main__':
