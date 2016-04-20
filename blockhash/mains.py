@@ -23,6 +23,7 @@ def chunks(file_object, chunk_size=20971520):
         yield data
 
 def hashing(piece):
+    piece += ":chunk"
     if args.sha1:
         return str(hashlib.sha1(piece).hexdigest())
     elif args.sha224:
@@ -45,12 +46,12 @@ def main():
     parser.add_argument('-4', '--sha384', action='store_true')
     parser.add_argument('-5', '--sha512', action='store_true')
     parser.add_argument('-f', '--file', type=str, help="The path to the file")
-    
+
     if len(sys.argv) == 1:
         parser.print_help()
         return
 
-    global args 
+    global args
     args = parser.parse_args()
 
     hashtree = ''
@@ -59,14 +60,11 @@ def main():
     pool = Pool(multiprocessing.cpu_count())
 
     for chunk_hash in pool.imap(hashing, chunks(big_file)):
-        hashtree = hashtree + chunk_hash
+        hashtree += chunk_hash + ":hash"
 
-    pool.terminate() 
+    pool.terminate()
 
-    if os.path.getsize(args.file) < 20971520:
-        print(hashtree)
-    else:
-        print(str(hashing(hashtree)))
+    print(str(hashing(hashtree)))
 
 
 if __name__ == '__main__':
