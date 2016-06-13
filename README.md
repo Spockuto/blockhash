@@ -50,6 +50,7 @@ If you want to add features, improve them, or report issues, feel free to send a
 #Contributors
 
 * [Venkkatesh Sekar](https://github.com/Spockuto)
+* [Jack Serrino](https://github.com/Detry322)
 
 #License
 
